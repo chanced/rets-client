@@ -56,8 +56,8 @@ describe('test client.searchRets functionality', function() {
 });
 
 
-describe('test client.search functionality', function() {
-    it('Client invokes rets targeted search and parsing query', function(done) {
+describe('test client.query functionality', function() {
+    it('Client invokes rets targeted query and parsing', function(done) {
         var mochaTest = this;
         var client = rets.getClient(config.url, config.username, config.password);
 

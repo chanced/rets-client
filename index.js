@@ -380,6 +380,26 @@ Client.prototype.getObjectMeta = function(resourceType, callback) {
     });
 };
 
+/**
+ * Invokes RETS search operation.
+ *
+ * @param _queryOptions Search query options.
+ *        See RETS specification for query options.
+ *
+ *        Default values query params:
+ *
+ *           queryType:'DMQL2',
+ *           format:'COMPACT-DECODED',
+ *           count:1,
+ *           standardNames:0,
+ *           restrictedIndicator:'***',
+ *           limit:"NONE"
+ *
+ * @param callback(error, data) (optional)
+ *
+ * @event search.success(data) Search RETS is successful
+ * @event search.failure(error) Search RETS failed
+ */
 Client.prototype.searchRets = function(_queryOptions, callback) {
     var self = this;
 
@@ -398,8 +418,8 @@ Client.prototype.searchRets = function(_queryOptions, callback) {
  * @param callback(error, data) (optional)
  * @param _limit (optional) Limits the number of records returned.
  *
- * @event search.success(data) Search call is successful
- * @event search.failure(error) Search call failed
+ * @event query.success(data) Query is successful
+ * @event query.failure(error) Query failed
  */
 Client.prototype.query = function(resourceType, classType, queryString, callback, _limit) {
     var self = this;
