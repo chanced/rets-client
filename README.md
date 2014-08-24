@@ -10,7 +10,7 @@ Library was developed against a server running RETS v1.7.2.
 #### Example RETS Session
 
 
-###### Create a Client Instance (Login)
+##### Create a Client Instance (Login)
 
 ```javascript
     //create rets-client
@@ -29,10 +29,10 @@ Library was developed against a server running RETS v1.7.2.
     });
 ```    
 
-###### Get Resources Meta-data
+##### Get Resources Metadata
 
 ```javascript
-    //get resources meta-data
+    //get resources metadata
     var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
 
     client.once('connection.success', function() {
@@ -52,10 +52,10 @@ Library was developed against a server running RETS v1.7.2.
 
 ```
 
-###### Get Class Meta-data
+##### Get Class Metadata
 
 ```javascript
-    //get class meta-data
+    //get class metadata
     var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
 
     client.once('connection.success', function() {
