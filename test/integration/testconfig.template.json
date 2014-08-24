@@ -1,0 +1,10 @@
+{
+    "url":"<RETS URL>",
+    "username":"<RETS USERNAME>",
+    "password":"<RETS PASSWORD>",
+    "testResourceType":"Property",
+    "testClassType":"RESI",
+    "testLookupType":"ArchitecturalStyle",
+    "testObjectPhotoType":"LargePhoto",
+    "testObjectId":"<TEST OBJECT ID>"
+}
