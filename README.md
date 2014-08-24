@@ -118,7 +118,8 @@ Library was developed against a server running RETS v1.7.2.
             fields = table.Fields;
 
             //pass resource, class, and DQML query
-            client.query("OpenHouse", "OPENHOUSE", "(OpenHouseType=PUBLIC),(ActiveYN=1)", function(error, data) {
+            client.query("OpenHouse", "OPENHOUSE", 
+            "(OpenHouseType=PUBLIC),(ActiveYN=1)", function(error, data) {
 
                 if (error) {
                     console.log(error);
@@ -156,7 +157,11 @@ Library was developed against a server running RETS v1.7.2.
 
             for(var i = 0; i < dataList.length; i++) {
                 console.log("Photo " + (i+1) + " MIME type: " + dataList[i].mime);
-                require('fs').writeFile("imgs/photo"+(i+1)+"."+dataList[i].mime.match(/image\/(\w+)/i)[1], dataList[i].buffer);
+                
+                require('fs').writeFile(
+                    "imgs/photo"+(i+1)+"."+dataList[i].mime.match(/image\/(\w+)/i)[1], 
+                    dataList[i].buffer
+                );
             }
         });
     });
