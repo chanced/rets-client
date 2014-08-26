@@ -33,7 +33,7 @@ Library was developed against a server running RETS v1.7.2.
 
 ```javascript
     //get resources metadata
-    var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
+    var client = require('rets-client').getClient(retsLoginUrl, retsUser, retsPassword);
 
     client.once('connection.success', function() {
         client.getResources();
