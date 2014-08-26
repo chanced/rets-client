@@ -14,7 +14,7 @@ Library was developed against a server running RETS v1.7.2.
 
 ```javascript
     //create rets-client
-    var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
+    var client = require('rets-client').getClient(retsLoginUrl, retsUser, retsPassword);
 
     //connection success event
     client.once('connection.success', function() {
@@ -56,7 +56,7 @@ Library was developed against a server running RETS v1.7.2.
 
 ```javascript
     //get class metadata
-    var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
+    var client = require('rets-client').getClient(retsLoginUrl, retsUser, retsPassword);
 
     client.once('connection.success', function() {
         client.getClass("Property");
@@ -78,7 +78,7 @@ Library was developed against a server running RETS v1.7.2.
 
 ```javascript
     //get field data
-    var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
+    var client = require('rets-client').getClient(retsLoginUrl, retsUser, retsPassword);
 
     client.once('connection.success', function() {
         client.getTable("Property", "RESI");
@@ -105,7 +105,7 @@ Library was developed against a server running RETS v1.7.2.
 
 ```javascript
     //perform a query using DQML
-    var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
+    var client = require('rets-client').getClient(retsLoginUrl, retsUser, retsPassword);
 
     client.once('connection.success', function() {
 
@@ -145,7 +145,7 @@ Library was developed against a server running RETS v1.7.2.
 
 ```javascript
     //get photos
-    var client = rets.getClient(retsLoginUrl, retsUser, retsPassword);
+    var client = require('rets-client').getClient(retsLoginUrl, retsUser, retsPassword);
 
     client.once('connection.success', function() {
 
